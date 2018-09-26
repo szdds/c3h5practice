@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body {
+            background: url('img/bg.png') left top/cover;
+            height: 100%;
+            width: 100%;
+        }
+        ul{
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        li {
+            background: url('img/fish.png');
+            height: 125px;
+            width: 174px;
+            
+        }
+        li:nth-child(1){
+            animation: move 4s infinite,yaobai 1s steps(11) infinite;
+        }
+        li:nth-child(2){
+            animation: move 4.8s infinite,yaobai 1s steps(11) infinite;
+        }
+        li:nth-child(3){
+            animation: move 6.6s infinite,yaobai 1s steps(11) infinite;
+        }
+        li:nth-child(4){
+            animation: move 5.6s infinite,yaobai 1s steps(11) infinite;
+        }
+        li:nth-child(5){
+            animation: move 5.6s infinite,yaobai 1s steps(11) infinite;
+        }
+        @keyframes move {
+            50% {
+                transform: translate(1600px,0);
+            }
+            60% {
+                /* 在已经到1600px的基础上再旋转 */
+                transform: translate(1600px,0) rotate(-180deg);
+            }
+            90% {
+                transform:  rotate(180deg);
+            }
+        }
+        @keyframes yaobai {
+            from{}
+            to {
+                background-position-y: -1387px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

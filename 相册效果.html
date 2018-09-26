@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+            perspective: 800px;
+        }
+        ul {
+            list-style: none;
+            width: 200px;
+            height: 280px;
+            margin: 200px auto;
+            position: relative;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+        li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border: 1px solid gold;
+            transform-origin: left;
+        }
+        li:nth-child(5) {
+            /* transition: all 1s 1s;            */
+            
+            background: url('img/girl5.jpg') no-repeat center/cover;
+        }
+        li:nth-child(4) {
+            background: url('img/girl4.jpg') no-repeat center/cover;
+        }
+        li:nth-child(3) {
+            background: url('img/girl3.jpg') no-repeat center/cover;
+        }
+        li:nth-child(2) {
+            background: url('img/girl2.jpg') no-repeat center/cover;
+        }
+        
+        li:nth-child(1) {
+            background: url('img/girl1.jpg') no-repeat center/cover;
+            /* transition: all 1s 4.0s; */
+        }
+        
+
+        ul:hover {
+            
+            transform: rotate(5deg) rotateX(45deg)
+        }
+        ul:hover li:nth-child(5) {
+            transform: rotateY(-170deg);
+        }
+        ul:hover li:nth-child(4) {
+            transition: all 1s 2s;           
+            transform: rotateY(-150deg);
+        }
+        ul:hover li:nth-child(3) {
+            transition: all 1s 3s;           
+            transform: rotateY(-140deg);
+        }
+        ul:hover li:nth-child(2) {
+            transition: all 1s 4s;          
+            transform: rotateY(-120deg);
+        }
+        /* ul:hover li:nth-child(5) {
+            transform: rotateY(-100deg);
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
